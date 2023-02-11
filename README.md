@@ -4,3 +4,6 @@
 3. Select_query.sql
 
 ## Добавлен файл с SELECT запросами "Продвинутая выборка данных"
+[Select_query_#2.sql](https://github.com/Nikolaytcev/sql_homework/blob/main/Select_query_%232.sql)
+
+
