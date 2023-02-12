@@ -7,6 +7,9 @@
 [Select_query_#2.sql](https://github.com/Nikolaytcev/sql_homework/blob/main/Select_query_%232.sql)
 <<<<<<< HEAD
 
+## Добавлен файл д/з "Работа с PostgreSQL из Python"
+[SQL_Python.py](https://github.com/Nikolaytcev/sql_homework/blob/main/SQL_Python.py)
+
 
 =======
 >>>>>>> 41ae0b132fc8d7585306560fbd9e8dcdb544accb
