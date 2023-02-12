@@ -54,8 +54,9 @@ class DataBase:
         print('Таблицы созданы!')
 
     def show_result(self, client_info):
-        self.cur.execute("""SELECT first_name, last_name, email, phone FROM client_info WHERE
-                            first_name=%s AND last_name=%s AND email=%s;""", client_info[:-1])
+        self.cur.execute("""SELECT first_name, last_name, email, phone_number FROM client_info ci
+         LEFT JOIN phone_numbers pn ON ci.phone=pn.number_id WHERE
+         first_name=%s AND last_name=%s AND email=%s;""", client_info[:-1])
         return self.cur.fetchall()
 
     def add_client(self, *args, info='Добавили нового клиента'):
@@ -98,7 +99,7 @@ class DataBase:
             p[-1] = (phone,)
             sql = "UPDATE phone_numbers SET phone_number=%s WHERE phone_number=%s;"
             self.cur.execute(sql, (phone, old[-1]))
-        print(f'Данные клиента {old[:-1]} изменены на: {self.show_result(p)}')
+        print(f'Данные клиента {old} изменены на: {self.show_result(p)}')
 
     def delete_clients_phone(self, *client_info):
         sql = """UPDATE client_info SET phone=%s WHERE phone=
