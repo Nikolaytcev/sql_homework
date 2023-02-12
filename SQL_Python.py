@@ -9,7 +9,7 @@ def connect_db(name_db, password):
 
 
 def main():
-    password = 'Ybrjkfqwtd1990'
+    password = ''
     name_db = 'clients'
     conn, cur = connect_db(name_db, password)
     db = DataBase(conn, cur)
